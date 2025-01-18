@@ -1,11 +1,11 @@
 Create database Sql_basic;
 
-Create table employee_demographics (employee_ID int not null, first_name varchar(50), last_name varchar(50), 
-age int, gender varchar (10), birth_date DATE, Primary key (employee_ID));
+Create table employee_demographics (employee_ID smallint not null, first_name varchar(50), last_name varchar(50), 
+age smallint, gender varchar (10), birth_date DATE, Primary key (employee_ID));
 
 -- we can assign primary key at the starting i.e. employee_ID int not null primary key
-Create Table employee_salary( employee_id int not null, first_name varchar(50) not null, 
-last_name varchar(50),occupation varchar(50),salary INT,dept_id INT);
+Create Table employee_salary( employee_id smallint not null, first_name varchar(50) not null, 
+last_name varchar(50),occupation varchar(50),salary MEDIUMINT,dept_id INT);
 
 insert into employee_demographics(employee_ID,first_name,last_name,age,gender,birth_date)
 values

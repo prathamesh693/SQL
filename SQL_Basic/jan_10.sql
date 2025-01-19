@@ -24,14 +24,14 @@ values
 
 INSERT INTO employee_salary(employee_id,first_name,last_name,occupation,salary,dept_id)
 VALUES
-(125,'roy','joy','actor',52146,101),
-(126,'roy','joy','actor',52146,101),
-(128,'roy','joy','actor',52146,101),
-(129,'roy','joy','actor',52146,101),
-(130,'roy','joy','actor',52146,101),
-(131,'roy','joy','actor',52146,101),
-(132,'roy','joy','actor',52146,101),
-(133,'roy','joy','actor',52146,101),
-(134,'roy','joy','actor',52146,101),
-(135,'roy','joy','actor',52146,101),
-(136,'roy','joy','actor',52146,101);
+(125, 'Roy', 'Joy', 'Actor', 52146, 101),
+(126, 'Tom', 'Hope', 'Director', 52147, 102),
+(128, 'Sam', 'Lowe', 'Producer', 52148, 103),
+(129, 'Jake', 'Smith', 'Writer', 52149, 104),
+(130, 'Eva', 'Johnson', 'Editor', 52150, 105),
+(131, 'Liam', 'Brown', 'Cinematographer', 52151, 106),
+(132, 'Sophia', 'Davis', 'Actor', 52152, 107),
+(133, 'Mia', 'Wilson', 'Director', 52153, 108),
+(134, 'Noah', 'Clark', 'Producer', 52154, 109),
+(135, 'Emma', 'Lewis', 'Writer', 52155, 110),
+(136, 'Ava', 'Walker', 'Editor', 52156, 111);

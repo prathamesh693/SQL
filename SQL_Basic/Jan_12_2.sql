@@ -1,31 +1,31 @@
 -- Group by clause
 
 -- GROUP OF MALE AND FEMALE WITH THEIR COUNT  
-SELECT gender, COUNT(*) FROM employee_demographics GROUP BY gender;
+SELECT Gender, COUNT(*) FROM Employee_Demographics GROUP BY Gender;
 
--- Retrive the AVG salary and group of dept_id their AVG
-SELECT dept_id, AVG(salary) FROM employee_salary GROUP BY dept_id;
+-- Retrive the AVG Salary and group of Employee_ID their AVG
+SELECT Employee_ID, AVG(Salary) FROM Employee_Salary GROUP BY Employee_ID;
 
---  Get the total salary by occupation
-SELECT occupation, SUM(salary) FROM employee_salary GROUP BY occupation;
+--  Get the total Salary by Job_TItle
+SELECT Job_TItle, SUM(Salary) FROM Employee_Salary GROUP BY Job_TItle;
 
 -- Count employees by first name
-SELECT first_name, COUNT(*) FROM employee_salary GROUP BY first_name;
+SELECT First_Name, COUNT(*) FROM Employee_Salary GROUP BY First_Name;
 
--- Get the maximum salary by department
-SELECT dept_id, MAX(salary) FROM employee_salary GROUP BY dept_id;
+-- Get the maximum Salary by department
+SELECT Employee_ID, MAX(Salary) FROM Employee_Salary GROUP BY Employee_ID;
 
--- Count employees by age
-SELECT age, COUNT(*) FROM employee_demographics GROUP BY age;
+-- Count employees by Age
+SELECT Age, COUNT(*) FROM Employee_Demographics GROUP BY Age;
 
--- Calculate the average age by gender
-SELECT gender, AVG(age) FROM employee_demographics GROUP BY gender;
+-- Calculate the averAge Age by Gender
+SELECT Gender, AVG(Age) FROM Employee_Demographics GROUP BY Gender;
 
 -- Count employees by last name
-SELECT last_name, COUNT(*) FROM employee_salary GROUP BY last_name;
+SELECT Last_Name, COUNT(*) FROM Employee_Salary GROUP BY Last_Name;
 
 -- Count employees by department
-SELECT dept_id, COUNT(*) FROM employee_salary GROUP BY dept_id;
+SELECT Employee_ID, COUNT(*) FROM Employee_Salary GROUP BY Employee_ID;
 
--- Count employees by occupation
-SELECT occupation, COUNT(*) FROM employee_salary GROUP BY occupation;
+-- Count employees by Job_TItle
+SELECT Job_TItle, COUNT(*) FROM Employee_Salary GROUP BY Job_TItle;

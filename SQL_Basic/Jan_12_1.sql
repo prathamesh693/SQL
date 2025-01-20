@@ -6,35 +6,37 @@
 13. ON	14. USING	15. WIHT	16. AS	17. CASE
 */
 
+SELECT * FROM Employee_Demographics;
+SELECT * FROM Employee_Salary;
 -- WHERE CLAUSE
 
--- check employee_demographics details who age is greater than 40;
-SELECT * FROM employee_demographics WHERE age > 40;
+-- check Employee_Demographics details who Age is greater than 30;
+SELECT * FROM Employee_Demographics WHERE Age > 30;
 
 -- Retrive the data of an employee whocs salry is greater than 50000
-SELECT * FROM employee_salary WHERE salary > 50000;
+SELECT * FROM Employee_Salary WHERE Salary > 50000;
 
--- Retrive the data os employee where occupation is actor
-SELECT * FROM employee_salary WHERE occupation = 'actor';
+-- Retrive the data os employee where Job_TItle is HR
+SELECT * FROM Employee_Salary WHERE Job_TItle = 'HR';
 
 -- Retive the data of all female employee 
-SELECT * FROM employee_demographics WHERE gender = 'Female';
+SELECT * FROM Employee_Demographics WHERE Gender = 'Female';
 
--- Retrive the salary of dept id is 101;
-SELECT * FROM employee_salary WHERE dept_id = 101;
+-- Retrive the Salary of dept id is 1001;
+SELECT * FROM Employee_Salary WHERE Employee_ID = 1001;
 
 -- Retrive the employee whos first name is start with A
-SELECT * FROM employee_demographics WHERE first_name LIKE 'A%';
+SELECT * FROM Employee_Demographics WHERE First_Name LIKE 'A%';
 
--- Access the data of employee who first name is roy and last name is joy 
+-- Access the data of employee who first name is Pam and last name is Beasley 
 -- if both condition are true then only data retrive.
-SELECT * FROM employee_salary WHERE first_name = 'roy' AND last_name = 'joy';
+SELECT * FROM Employee_Salary WHERE First_Name = 'Pam' AND Last_Name = 'Beasley';
 
 -- Retrive the employee data which date of birth is less than 1990-01-01
-SELECT * FROM employee_demographics WHERE birth_date < '1990-01-01';
+SELECT * FROM Employee_Demographics WHERE Birth_Date < '1990-01-01';
 
--- Retrive  all information of an employee who salary is between 50000 to 60000
-SELECT * FROM employee_salary WHERE salary BETWEEN 50000 AND 60000;
+-- Retrive  all information of an employee who Salary is between 50000 to 60000
+SELECT * FROM Employee_Salary WHERE Salary BETWEEN 50000 AND 60000;
 
--- Show the employee which salary is null 
-SELECT * FROM employee_salary WHERE salary IS NULL;
+-- Show the employee which Salary is null 
+SELECT * FROM Employee_Salary WHERE Salary IS NULL;

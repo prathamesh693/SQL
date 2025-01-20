@@ -1,37 +1,87 @@
 Create database Sql_basic;
+-- create database sql_basic;
 
-Create table employee_demographics (employee_ID smallint not null, first_name varchar(50), last_name varchar(50), 
-age smallint, gender varchar (10), birth_date DATE, Primary key (employee_ID));
+-- Table 1 Query:
+Create Table Employee_Demographics 
+(Employee_ID int, 
+First_Name varchar(50), 
+Last_Name varchar(50), 
+Age int, 
+Gender varchar(50),
+Birth_Date date
+);
 
--- we can assign primary key at the starting i.e. employee_ID int not null primary key
-Create Table employee_salary( employee_id smallint not null, first_name varchar(50) not null, 
-last_name varchar(50),occupation varchar(50),salary MEDIUMINT,dept_id INT);
-
-insert into employee_demographics(employee_ID,first_name,last_name,age,gender,birth_date)
-values
-(1,'Leslie','knope',44,'Female','1979-09-25'),
-(3,'Tom','Haverford',36,'Male','1987-03-04'),
-(4,'April','Lulgate',29,'Female','1994-03-27'),
-(5,'Jerry','Gergics',51,'Male','1962-08-28'),
-(6,'Donsha','Meagle',46,'Female','1977-07-30'),
-(7,'Ann','Perkins',35,'Female','1988-12-01'),
-(8,'cheris','Traeger',43,'Male','1900-11-11'),
-(9,'Den','Wyatt',30,'Male','1985-07-26'),
-(10,'Andy','Owyer',34,'Male','1989-03-25'),
-(11,'Mark','Brendanow',40,'Male','1983-06-14'),
-(12,'Creig','mideletreeke',37,'Male','1986-07-27');
+-- Table 2 Query:
+Create Table Employee_Salary 
+(Employee_ID int, 
+Job_Title varchar(50), 
+Salary int
+);
 
 
-INSERT INTO employee_salary(employee_id,first_name,last_name,occupation,salary,dept_id)
+-- Table 1 Insert:
+INSERT INTO Employee_Demographics (Employee_ID, First_Name, Last_Name, Age, Gender, Birth_Date)
 VALUES
-(125, 'Roy', 'Joy', 'Actor', 52146, 101),
-(126, 'Tom', 'Hope', 'Director', 52147, 102),
-(128, 'Sam', 'Lowe', 'Producer', 52148, 103),
-(129, 'Jake', 'Smith', 'Writer', 52149, 104),
-(130, 'Eva', 'Johnson', 'Editor', 52150, 105),
-(131, 'Liam', 'Brown', 'Cinematographer', 52151, 106),
-(132, 'Sophia', 'Davis', 'Actor', 52152, 107),
-(133, 'Mia', 'Wilson', 'Director', 52153, 108),
-(134, 'Noah', 'Clark', 'Producer', 52154, 109),
-(135, 'Emma', 'Lewis', 'Writer', 52155, 110),
-(136, 'Ava', 'Walker', 'Editor', 52156, 111);
+(1001, 'Jim', 'Halpert', 30, 'Male', '1995-01-01'),
+(1002, 'Pam', 'Beasley', 30, 'Female', '1995-01-01'),
+(1003, 'Dwight', 'Schrute', 29, 'Male', '1996-01-01'),
+(1004, 'Angela', 'Martin', 31, 'Female', '1994-01-01'),
+(1005, 'Toby', 'Flenderson', 32, 'Male', '1993-01-01'),
+(1006, 'Michael', 'Scott', 35, 'Male', '1990-01-01'),
+(1007, 'Meredith', 'Palmer', 32, 'Female', '1993-01-01'),
+(1008, 'Stanley', 'Hudson', 38, 'Male', '1987-01-01'),
+(1009, 'Kevin', 'Malone', 31, 'Male', '1994-01-01');
+
+-- Table 2 Insert:
+Insert Into Employee_Salary VALUES
+(1001, 'Salesman', 45000),
+(1002, 'Receptionist', 36000),
+(1003, 'Salesman', 63000),
+(1004, 'Accountant', 47000),
+(1005, 'HR', 50000),
+(1006, 'Regional Manager', 65000),
+(1007, 'Supplier Relations', 41000),
+(1008, 'Salesman', 48000),
+(1009, 'Accountant', 42000);
+
+-- Add First and Last name columns.
+ALTER TABLE Employee_Salary
+ADD First_Name VARCHAR(50),
+ADD Last_Name VARCHAR(50);
+
+-- Update the First_Name and Last_Name of Employee_Salary
+UPDATE Employee_Salary
+SET First_Name = 'Jim', Last_Name = 'Halpert'
+WHERE Employee_ID = 1001;
+
+UPDATE Employee_Salary
+SET First_Name = 'Pam', Last_Name = 'Beasley'
+WHERE Employee_ID = 1002;
+
+UPDATE Employee_Salary
+SET First_Name = 'Dwight', Last_Name = 'Schrute'
+WHERE Employee_ID = 1003;
+
+UPDATE Employee_Salary
+SET First_Name = 'Angela', Last_Name = 'Martin'
+WHERE Employee_ID = 1004;
+
+UPDATE Employee_Salary
+SET First_Name = 'Toby', Last_Name = 'Flenderson'
+WHERE Employee_ID = 1005;
+
+UPDATE Employee_Salary
+SET First_Name = 'Michael', Last_Name = 'Scott'
+WHERE Employee_ID = 1006;
+
+UPDATE Employee_Salary
+SET First_Name = 'Meredith', Last_Name = 'Palmer'
+WHERE Employee_ID = 1007;
+
+UPDATE Employee_Salary
+SET First_Name = 'Stanley', Last_Name = 'Hudson'
+WHERE Employee_ID = 1008;
+
+UPDATE Employee_Salary
+SET First_Name = 'Kevin', Last_Name = 'Malone'
+WHERE Employee_ID = 1009;

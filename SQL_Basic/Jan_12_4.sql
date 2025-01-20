@@ -1,31 +1,29 @@
 -- HAVING CLAUSE
 
--- Get average age by gender and filter groups with avg age > 35
-SELECT gender, AVG(age) AS avg_age FROM employee_demographics GROUP BY gender HAVING avg_age > 35;
+-- Get averAge Age by Gender and filter groups with avg Age > 30
+SELECT Gender, AVG(Age) AS avg_Age FROM Employee_Demographics GROUP BY Gender HAVING avg_Age > 30;
 
--- Count employees by department, filter groups with more than 5 employees
-SELECT dept_id, COUNT(*) AS num_employees FROM employee_salary GROUP BY dept_id HAVING num_employees > 5;
+-- Get total Salary by Job_Title and filter groups with total Salary > 50,000
+SELECT Job_Title, SUM(Salary) AS total_Salary FROM Employee_Salary GROUP BY Job_Title HAVING total_Salary > 50000;
 
--- Get total salary by occupation and filter groups with total salary > 500,000
-SELECT occupation, SUM(salary) AS total_salary FROM employee_salary GROUP BY occupation HAVING total_salary > 500000;
+-- Get maximum Salary by department and filter groups with max Salary > 52,000
+SELECT Employee_ID, MAX(Salary) AS max_Salary FROM Employee_Salary GROUP BY Employee_ID HAVING max_Salary > 52000;
 
--- Get maximum salary by department and filter groups with max salary > 52,000
-SELECT dept_id, MAX(salary) AS max_salary FROM employee_salary GROUP BY dept_id HAVING max_salary > 52000;
-
--- Get average salary by occupation and filter groups with avg salary > 50,000
-SELECT occupation, AVG(salary) AS avg_salary FROM employee_salary GROUP BY occupation HAVING avg_salary > 50000;
+-- Get averAge Salary by Job_Title and filter groups with avg Salary > 50,000
+SELECT Job_Title, AVG(Salary) AS avg_Salary FROM Employee_Salary GROUP BY Job_Title HAVING avg_Salary > 50000;
 
 -- Count employees by department, filter groups with more than one employee
-SELECT dept_id, COUNT(*) FROM employee_salary GROUP BY dept_id HAVING COUNT(*) > 1;
+SELECT Employee_ID, COUNT(*) FROM Employee_Salary GROUP BY Employee_ID HAVING COUNT(*) > 1;
 
--- Get minimum salary by occupation, filter groups with minimum salary > 50,000
-SELECT occupation, MIN(salary) FROM employee_salary GROUP BY occupation HAVING MIN(salary) > 50000;
+-- Get minimum Salary by Job_Title, filter groups with minimum Salary > 50,000
+SELECT Job_Title, MIN(Salary) FROM Employee_Salary GROUP BY Job_Title HAVING MIN(Salary) > 50000;
 
--- Count employees by gender, filter groups with more than three employees
-SELECT gender, COUNT(*) FROM employee_demographics GROUP BY gender HAVING COUNT(*) > 3;
+-- Count employees by Gender, filter groups with more than three employees
+SELECT Gender, COUNT(*) FROM Employee_Demographics GROUP BY Gender HAVING COUNT(*) > 3;
 
--- Get average salary by department and filter groups with avg salary > 52,000
-SELECT dept_id, AVG(salary) FROM employee_salary GROUP BY dept_id HAVING AVG(salary) > 52000;
+-- Get Average Salary by department and filter groups with avg Salary > 52,000
+SELECT Employee_ID, AVG(Salary) FROM Employee_Salary GROUP BY Employee_ID HAVING AVG(Salary) > 52000;
 
--- Get maximum salary by occupation and filter groups with max salary > 52,000
-SELECT occupation, MAX(salary) FROM employee_salary GROUP BY occupation HAVING MAX(salary) > 52000;
+-- Get maximum Salary by Job_Title and filter groups with max Salary > 52,000
+SELECT Job_Title, MAX(Salary) FROM Employee_Salary GROUP BY Job_Title HAVING MAX(Salary) > 52000;
+

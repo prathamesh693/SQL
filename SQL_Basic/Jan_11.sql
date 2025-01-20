@@ -1,39 +1,39 @@
-SELECT * FROM employee_demographics;
-SELECT * FROM employee_salary;
-
+SELECT * FROM Employee_Demographics;
+SELECT * FROM Employee_Salary;
 
 -- SELECT STATEMENT
-SELECT * FROM employee_demographics;
+SELECT * FROM Employee_Demographics;
 
 -- Retrive the perticular tables columns 
-SELECT employee_demographics.first_name
-FROM employee_demographics;
+SELECT Employee_Demographics.First_Name
+FROM Employee_Demographics;
 
 -- Retrive data without mension the table name for perticular columns name
-SELECT employee_ID,first_name,salary FROM employee_salary;
+SELECT Employee_ID,Salary FROM Employee_Salary;
 
 -- Spesific Column with both table
-SELECT employee_demographics.first_name,employee_salary.salary 
-FROM employee_demographics,employee_salary;
+SELECT Employee_Demographics.First_Name,Employee_Salary.Salary 
+FROM Employee_Demographics,Employee_Salary;
 
 -- #### Select The Distinct data set ### 
 -- Using Select Statament
-SELECT distinct salary ,first_name FROM employee_salary;
+SELECT distinct Salary ,Employee_ID FROM Employee_Salary;
 
 -- Retrive the perticular tables columns 
-SELECT distinct first_name
-FROM employee_demographics;
+SELECT distinct First_Name
+FROM Employee_Demographics;
 
 -- Retrive data without mension the table name for perticular columns name
-SELECT distinct employee_demographics.age FROM employee_demographics;
+SELECT distinct Employee_Demographics.Age FROM Employee_Demographics;
 
 -- Spesific Column with both table
-SELECT distinct employee_demographics.first_name,employee_salary.salary 
-FROM employee_demographics,employee_salary;
+SELECT distinct Employee_Demographics.First_Name,Employee_Salary.Salary 
+FROM Employee_Demographics,Employee_Salary;
 
--- count distinct age then count distinct gender
-SELECT count(distinct age) as unique_value
-FROM employee_demographics;
+-- count distinct Age 
+SELECT count(distinct Age) as unique_value
+FROM Employee_Demographics;
 
-SELECT count(distinct gender) as unique_value
-FROM employee_demographics;
+-- Count distinct Gender 
+SELECT count(distinct Gender) as unique_value
+FROM Employee_Demographics;

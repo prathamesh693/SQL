@@ -1,9 +1,11 @@
 -- JOIN
 
--- FULL OUTER JOIN
 -- INNER JOIN 
--- LEFT JOIN 
--- RIGHT JOIN
+-- OUTER JOIN
+    -- LEFT JOIN 
+    -- RIGHT JOIN
+    -- FULL JOIN
+-- CROSS JOIN
 
 UPDATE sql_basic.Employee_Demographics SET Employee_ID = 101 WHERE (Employee_ID = 1);
 UPDATE sql_basic.Employee_Demographics SET Employee_ID = 102 WHERE (Employee_ID = 3);
@@ -16,6 +18,12 @@ UPDATE sql_basic.Employee_Demographics SET Employee_ID = 108 WHERE (Employee_ID 
 UPDATE sql_basic.Employee_Demographics SET Employee_ID = 109 WHERE (Employee_ID = 10);
 UPDATE sql_basic.Employee_Demographics SET Employee_ID = 110 WHERE (Employee_ID = 11);
 UPDATE sql_basic.Employee_Demographics SET Employee_ID = 111 WHERE (Employee_ID = 12);
+
+-- Returns all rows when there is a match in one of the tables.
+-- If there’s no match, NULL is returned for the columns of the missing table.
+SELECT e.Employee_ID, e.First_Name, s.Salary
+FROM Employee_Demographics e
+FULL JOIN Employee_Salary s ON e.Employee_ID = s.Employee_ID;
 
 
 -- Retrieves matching records from both tables based on Employee_ID.
@@ -57,3 +65,8 @@ INNER JOIN Sql_basic.Employee_Salary
 ON sql_basic.Employee_Demographics.Employee_ID = sql_basic.Employee_Salary.Employee_ID 
 AND sql_basic.Employee_Salary.Salary > 5000
 AND sql_basic.Employee_Salary.Employee_ID = 1001;
+
+-- CROSS JOIN   :- All possible Combination of a both Table
+SELECT e.First_Name, s.Salary
+FROM Employee_Demographics e
+CROSS JOIN Employee_Salary s;

@@ -1,0 +1,51 @@
+1. Database Design and Schema
+   - Question: Describe a database schema you have designed in a past project. What were the key entities, and how did you establish relationships between them?
+   - Follow-Up: How did you handle normalization? Did you denormalize any tables for performance reasons?
+
+2. Data Modeling
+   - Question: How would you model a database for an e-commerce application? What tables would you include, and how would they relate to each other?
+   - Follow-Up: How would you design the schema to handle scenarios like discount codes, product reviews, and inventory management?
+
+3. Query Optimization
+   - Question: Can you discuss a time when you optimized an SQL query? What was the original query, and what changes did you make to improve its performance?
+   - Follow-Up: What tools or techniques did you use to identify and resolve the performance issues?
+
+4. ETL Processes
+   - Question: Describe an ETL (Extract, Transform, Load) process you have implemented. How did you handle data extraction, transformation, and loading?
+   - Follow-Up: How did you ensure data quality and consistency during the ETL process?
+
+5. Handling Large Datasets
+   - Question: In a project where you dealt with large datasets, how did you manage performance and storage issues?
+   - Follow-Up: What indexing strategies or partitioning techniques did you use?
+
+6. Joins and Subqueries
+   - Question: Provide an example of a complex query you wrote involving multiple joins and subqueries. What was the business problem you were solving?
+   - Follow-Up: How did you ensure that the query performed efficiently?
+
+7. Stored Procedures and Functions
+   - Question: Have you created stored procedures or functions in any of your projects? Can you describe one and explain why you chose to encapsulate the logic in a stored procedure?
+   - Follow-Up: How did you handle error handling and logging within the stored procedure?
+
+8. Data Integrity and Constraints
+   - Question: How did you enforce data integrity in your SQL projects? Can you give examples of constraints (e.g., primary keys, foreign keys, unique constraints) you implemented?
+   - Follow-Up: How did you handle situations where constraints needed to be temporarily disabled or modified?
+
+9. Version Control and Collaboration
+   - Question: How did you manage database version control in your projects? What tools or practices did you use to ensure collaboration with other developers?
+   - Follow-Up: How did you handle conflicts or issues arising from multiple developers working on the same database?
+
+10. Data Migration
+   - Question: Describe a data migration project you worked on. How did you ensure that the migration was successful, and what steps did you take to handle data inconsistencies or errors?
+   - Follow-Up: How did you test the migration process before moving to the production environment?
+
+11. Security and Permissions
+   - Question: In your SQL projects, how did you manage database security? 
+   - Follow-Up: How did you handle encryption or sensitive data within the database?
+
+12. Handling Unstructured Data
+   - Question: Have you worked with unstructured or semi-structured data in an SQL environment? 
+   - Follow-Up: What challenges did you face, and how did you overcome them?
+
+13. Real-Time Data Processing
+   - Question: Can you describe a project where you handled real-time data processing using SQL? What were the key challenges, and how did you address them?
+   - Follow-Up: How did you ensure the performance and reliability of the real-time data processing system?
